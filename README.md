@@ -1,20 +1,20 @@
-# IT Student Portfolio — Black & White Template
+# Portfolio — Separate Pages (Black & White)
 
-This is a minimal black-and-white portfolio template for an IT student.
+This repo uses separate pages (index, about, skills, projects, contact) with a shared stylesheet and small JS.
 
-Visual improvements & safety
-- Polished layout, subtle effects, and reveal-on-scroll entrance animations (respecting prefers-reduced-motion).
-- Defensive JavaScript and conservative Content-Security-Policy.
+Files included:
+- index.html
+- about.html
+- skills.html
+- projects.html
+- contact.html
+- styles/style.css
+- scripts/main.js
+- resume.pdf (optional, add to repo root)
 
-How to use
-1. Personalize index.html with your name, bio, project descriptions, and email.
-2. Add resume.pdf to the repository root if you want the Resume button to download a file.
-3. Enable GitHub Pages in the repository settings to publish the site from the main branch.
-
-Local preview
-- Quick local server:
-  python3 -m http.server 8000
-  then open http://localhost:8000
-
-Notes
-- If you add external resources (fonts, images, analytics), update the Content-Security-Policy in index.html accordingly.
+Notes:
+- Strict black-and-white design; no external assets required.
+- Defensive Content-Security-Policy present in each HTML file. If you add external resources (fonts, analytics), update CSP accordingly.
+- To preview locally:
+  - python3 -m http.server 8000
+  - open http://localhost:8000/index.html

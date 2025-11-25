@@ -3,170 +3,71 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>IT Student Portfolio — Your Name</title>
-  <meta name="description" content="Portfolio of an IT student — projects, skills, and contact." />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';">
+  <title>Home — Your Name</title>
+  <meta name="description" content="Home — IT student portfolio" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self';">
   <meta name="referrer" content="no-referrer" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
 
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="brand" href="#">Your Name</a>
-
-      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" id="navToggle" aria-label="Toggle navigation">
-        <span aria-hidden="true">☰</span>
-      </button>
-
-      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Main navigation" aria-hidden="true">
+      <a class="brand" href="index.html">Your Name</a>
+      <nav class="primary-nav" role="navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="#about">About<span class="nav-underline"></span></a></li>
-          <li><a href="#skills">Skills<span class="nav-underline"></span></a></li>
-          <li><a href="#projects">Projects<span class="nav-underline"></span></a></li>
-          <li><a href="#contact">Contact<span class="nav-underline"></span></a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a class="btn" href="resume.pdf" download>Resume</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero" id="hero" data-animate>
-      <div class="container hero-inner">
+  <main id="content">
+    <section class="hero container">
+      <div class="hero-inner">
         <div class="hero-text">
           <h1>Hi — I'm Your Name</h1>
           <p class="lead">IT Student • Problem solver • DevOps & Web enthusiast</p>
-          <p>I'm an IT student building reliable systems and elegant interfaces. I enjoy learning new tech and delivering small, useful projects.</p>
+          <p>A concise introduction: systems, networking, and web development student building dependable tools and clean UIs.</p>
           <p class="hero-cta">
-            <a class="btn" href="#projects">View projects</a>
-            <a class="btn ghost" href="#contact">Contact me</a>
+            <a class="btn" href="projects.html">View projects</a>
+            <a class="btn ghost" href="contact.html">Contact</a>
           </p>
         </div>
-
         <div class="hero-figure" aria-hidden="true">
-          <!-- Subtle SVG pattern and avatar -->
-          <svg class="hero-pattern" viewBox="0 0 360 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar pattern">
-            <defs>
-              <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
-                <rect width="12" height="12" fill="#fff" />
-                <circle cx="6" cy="6" r="0.8" fill="#000" opacity="0.06"/>
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#dots)"/>
-            <g transform="translate(70,30)" stroke="#000" stroke-width="2" fill="none">
-              <circle cx="100" cy="40" r="36" fill="#fff"/>
-              <path d="M20 180c12-30 36-45 60-45s48 15 60 45" />
+          <svg width="220" height="220" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar">
+            <rect width="120" height="120" fill="#fff"/>
+            <g stroke="#000" stroke-width="2" fill="none">
+              <circle cx="60" cy="40" r="22"/>
+              <path d="M20 100c8-20 24-30 40-30s32 10 40 30" />
             </g>
           </svg>
         </div>
       </div>
     </section>
 
-    <section id="about" class="container about" data-animate>
-      <h2>About</h2>
-      <p>I am an IT student focused on systems, networking, and web development. I learn quickly and enjoy translating requirements into simple, maintainable solutions. Currently exploring cloud services, Linux automation, and full-stack projects.</p>
-      <ul class="meta">
-        <li><strong>Location:</strong> Your City</li>
-        <li><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></li>
-        <li><strong>Education:</strong> Your University — IT / Computer Science</li>
+    <section class="container intro">
+      <h2>Quick links</h2>
+      <ul class="quick-links">
+        <li><a href="about.html">About →</a></li>
+        <li><a href="skills.html">Skills →</a></li>
+        <li><a href="projects.html">Projects →</a></li>
       </ul>
-    </section>
-
-    <section id="skills" class="container skills" data-animate>
-      <h2>Skills</h2>
-      <div class="skill-grid">
-        <div class="skill">
-          <h3>Systems</h3>
-          <p>Linux, Bash, Systemd, Monitoring</p>
-        </div>
-        <div class="skill">
-          <h3>DevOps</h3>
-          <p>Docker, CI/CD, Git, GitHub Actions</p>
-        </div>
-        <div class="skill">
-          <h3>Web</h3>
-          <p>HTML, CSS, JavaScript, Node.js</p>
-        </div>
-        <div class="skill">
-          <h3>Networking</h3>
-          <p>TCP/IP, DHCP, DNS, Firewalls</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="container projects" data-animate>
-      <h2>Projects</h2>
-      <p class="muted">Selected student projects and exercises. Click a project to view source or demo.</p>
-
-      <div class="projects-grid">
-        <article class="project-card" data-animate>
-          <div class="project-figure" aria-hidden="true">
-            <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#fff" stroke="#000" stroke-width="2"/>
-              <text x="10" y="70" font-size="16" fill="#000">Project A</text>
-            </svg>
-          </div>
-          <div class="project-body">
-            <h3>Project A — Web App</h3>
-            <p>Simple web app demonstrating CRUD operations and deployment with Docker.</p>
-            <p class="project-links">
-              <a href="#" rel="noopener noreferrer">Source</a> · <a href="#" rel="noopener noreferrer">Demo</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="project-card" data-animate>
-          <div class="project-figure" aria-hidden="true">
-            <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#fff" stroke="#000" stroke-width="2"/>
-              <text x="10" y="70" font-size="16" fill="#000">Project B</text>
-            </svg>
-          </div>
-          <div class="project-body">
-            <h3>Project B — Automation</h3>
-            <p>Scripts for automating system setup and configuration management exercises.</p>
-            <p class="project-links">
-              <a href="#" rel="noopener noreferrer">Source</a> · <a href="#" rel="noopener noreferrer">Write-up</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="project-card" data-animate>
-          <div class="project-figure" aria-hidden="true">
-            <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
-              <rect width="200" height="120" fill="#fff" stroke="#000" stroke-width="2"/>
-              <text x="10" y="70" font-size="16" fill="#000">Project C</text>
-            </svg>
-          </div>
-          <div class="project-body">
-            <h3>Project C — Networking Lab</h3>
-            <p>Network simulation and documentation for subnetting and firewall rules.</p>
-            <p class="project-links">
-              <a href="#" rel="noopener noreferrer">Docs</a> · <a href="#" rel="noopener noreferrer">Lab files</a>
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="container contact" data-animate>
-      <h2>Contact</h2>
-      <p>If you'd like to reach out for collaboration or opportunities, email me at <a href="mailto:you@example.com">you@example.com</a> or connect via GitHub.</p>
-      <p class="contact-links">
-        <a class="btn" href="mailto:you@example.com">Email me</a>
-        <a class="btn ghost" href="https://github.com/CaptainPirate12" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </p>
     </section>
   </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <p>© <span id="year"></span> Your Name — IT Student. Built in black & white.</p>
+      <p>© <span id="year"></span> Your Name — IT Student. Black & White design.</p>
+      <p class="muted">Built with accessibility and simplicity in mind.</p>
     </div>
   </footer>
 
-  <script src="scripts/main.js" integrity="" crossorigin="anonymous"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
