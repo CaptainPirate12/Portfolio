@@ -1,4 +1,4 @@
-# Portfolio — Separate Pages (Black & White)
+# Portfolio — Lorenz Marl M. Busito (Separate Pages)
 
 This repo uses separate pages (index, about, skills, projects, contact) with a shared stylesheet and small JS.
 
