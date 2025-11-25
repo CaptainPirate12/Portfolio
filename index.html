@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>IT Student Portfolio — Your Name</title>
   <meta name="description" content="Portfolio of an IT student — projects, skills, and contact." />
-  <!-- Security policies: conservative, self-hosted resources only -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';">
   <meta name="referrer" content="no-referrer" />
   <link rel="stylesheet" href="styles/style.css" />
@@ -23,10 +22,10 @@
 
       <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Main navigation" aria-hidden="true">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About<span class="nav-underline"></span></a></li>
+          <li><a href="#skills">Skills<span class="nav-underline"></span></a></li>
+          <li><a href="#projects">Projects<span class="nav-underline"></span></a></li>
+          <li><a href="#contact">Contact<span class="nav-underline"></span></a></li>
           <li><a class="btn" href="resume.pdf" download>Resume</a></li>
         </ul>
       </nav>
@@ -34,7 +33,7 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" data-animate>
       <div class="container hero-inner">
         <div class="hero-text">
           <h1>Hi — I'm Your Name</h1>
@@ -45,20 +44,27 @@
             <a class="btn ghost" href="#contact">Contact me</a>
           </p>
         </div>
+
         <div class="hero-figure" aria-hidden="true">
-          <!-- Simple monochrome avatar placeholder -->
-          <svg width="220" height="220" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar">
-            <rect width="120" height="120" fill="#fff"/>
-            <g stroke="#000" stroke-width="2" fill="none">
-              <circle cx="60" cy="40" r="22"/>
-              <path d="M20 100c8-20 24-30 40-30s32 10 40 30" />
+          <!-- Subtle SVG pattern and avatar -->
+          <svg class="hero-pattern" viewBox="0 0 360 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar pattern">
+            <defs>
+              <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
+                <rect width="12" height="12" fill="#fff" />
+                <circle cx="6" cy="6" r="0.8" fill="#000" opacity="0.06"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#dots)"/>
+            <g transform="translate(70,30)" stroke="#000" stroke-width="2" fill="none">
+              <circle cx="100" cy="40" r="36" fill="#fff"/>
+              <path d="M20 180c12-30 36-45 60-45s48 15 60 45" />
             </g>
           </svg>
         </div>
       </div>
     </section>
 
-    <section id="about" class="container about">
+    <section id="about" class="container about" data-animate>
       <h2>About</h2>
       <p>I am an IT student focused on systems, networking, and web development. I learn quickly and enjoy translating requirements into simple, maintainable solutions. Currently exploring cloud services, Linux automation, and full-stack projects.</p>
       <ul class="meta">
@@ -68,7 +74,7 @@
       </ul>
     </section>
 
-    <section id="skills" class="container skills">
+    <section id="skills" class="container skills" data-animate>
       <h2>Skills</h2>
       <div class="skill-grid">
         <div class="skill">
@@ -90,12 +96,12 @@
       </div>
     </section>
 
-    <section id="projects" class="container projects">
+    <section id="projects" class="container projects" data-animate>
       <h2>Projects</h2>
       <p class="muted">Selected student projects and exercises. Click a project to view source or demo.</p>
 
       <div class="projects-grid">
-        <article class="project-card">
+        <article class="project-card" data-animate>
           <div class="project-figure" aria-hidden="true">
             <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
               <rect width="200" height="120" fill="#fff" stroke="#000" stroke-width="2"/>
@@ -111,7 +117,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-animate>
           <div class="project-figure" aria-hidden="true">
             <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
               <rect width="200" height="120" fill="#fff" stroke="#000" stroke-width="2"/>
@@ -127,7 +133,7 @@
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-animate>
           <div class="project-figure" aria-hidden="true">
             <svg viewBox="0 0 200 120" width="200" height="120" xmlns="http://www.w3.org/2000/svg">
               <rect width="200" height="120" fill="#fff" stroke="#000" stroke-width="2"/>
@@ -145,7 +151,7 @@
       </div>
     </section>
 
-    <section id="contact" class="container contact">
+    <section id="contact" class="container contact" data-animate>
       <h2>Contact</h2>
       <p>If you'd like to reach out for collaboration or opportunities, email me at <a href="mailto:you@example.com">you@example.com</a> or connect via GitHub.</p>
       <p class="contact-links">
