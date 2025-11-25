@@ -5,17 +5,26 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Lorenz Marl M. Busito</title>
   <meta name="description" content="About — IT student portfolio of Lorenz Marl M. Busito" />
+
+  <!-- Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self';">
+
   <meta name="referrer" content="no-referrer" />
   <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- Google Font (Safe Method: Local fallback styling) -->
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  </style>
 </head>
+
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Lorenz Marl M. Busito</a>
-      <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+      <nav class="primary-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="skills.html">Skills</a></li>
@@ -26,32 +35,37 @@
     </div>
   </header>
 
-  <main id="content" class="container">
-    <article class="about">
-      <h1>About</h1>
-      <p>I’m an IT student with a growing passion for web development and computer networking. I currently have beginner-level experience in building basic websites and understanding network fundamentals, and I’m continuously exploring new tools and technologies to improve my skills. I enjoy learning, solving problems, and working on hands-on projects that help me grow as a future IT professional.</p>
+  <main id="content" class="container fade-in">
+    <article class="about card">
+      <h1>About Me</h1>
+      <p class="intro">
+        I’m an IT student passionate about web development and computer networking. 
+        I currently have beginner-level experience in creating websites and learning network fundamentals. 
+        I love exploring new technologies, building hands-on projects, and continuously improving my skills.
+      </p>
+
+      <hr />
 
       <h3>Education</h3>
-      <ul>
-        <li>2022 - Present — Polytechnic University of the Philippines — Paranaque City — Bachelor of Science in Information Technology</li>
+      <ul class="styled-list">
+        <li>2022 - Present — Polytechnic University of the Philippines — Bachelor of Science in Information Technology</li>
         <li>2019 - 2021 — Paranaque National High School — Information Communication and Technology</li>
         <li>2015 - 2019 — Don Galo National High School — Paranaque City</li>
-        <li>2009 - 2015 — Paranaque National High School — Information Communication and Technology</li>
       </ul>
 
       <h3>Locations</h3>
-      <ul>
+      <ul class="styled-list">
         <li>417 Rome St BF Homes Intl Phase 4, Las Pinas City</li>
         <li>3293 Kabesang Cilio St. Tambo, Paranaque City</li>
       </ul>
 
       <h3>Contact</h3>
-      <p>Lorenz Marl M. Busito</p>
-      <p><em>Note:</em> provide an email address to make a clickable mailto link in the contact page.</p>
+      <p><strong>Lorenz Marl M. Busito</strong></p>
+      <p><em>Note: Add an email for clickable link in contact page.</em></p>
     </article>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Lorenz Marl M. Busito</p>
     </div>
