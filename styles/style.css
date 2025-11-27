@@ -25,10 +25,11 @@ html, body {
   position: sticky;
   top: 0;
   background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid #222;
   z-index: 10;
   padding: 1rem 0;
+  box-shadow: 0 5px 20px rgba(255,255,255,0.05);
   animation: fadeDown 0.6s ease forwards;
 }
 
@@ -44,6 +45,7 @@ html, body {
   text-decoration: none;
   color: #fff;
   letter-spacing: 1px;
+  text-shadow: 0 0 4px #fff, 0 0 10px #fff;
 }
 
 /* ===== Navigation ===== */
@@ -58,7 +60,7 @@ html, body {
   font-weight: 500;
   position: relative;
   color: #fff;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .primary-nav a::after {
@@ -78,6 +80,8 @@ html, body {
 
 .primary-nav a:hover {
   transform: translateY(-2px);
+  color: #0ff; /* Neon effect on hover */
+  text-shadow: 0 0 6px #0ff, 0 0 12px #0ff;
 }
 
 /* ===== Buttons ===== */
@@ -91,12 +95,14 @@ html, body {
   display: inline-block;
   margin-right: 10px;
   transition: all 0.3s ease;
+  box-shadow: 0 0 8px #fff, 0 0 15px #fff;
 }
 
 .btn:hover {
-  background: #222;
-  color: #fff;
+  background: #0ff;
+  color: #000;
   transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 12px #0ff, 0 0 25px #0ff;
 }
 
 .btn.ghost {
@@ -106,8 +112,9 @@ html, body {
 }
 
 .btn.ghost:hover {
-  background: #fff;
-  color: #0a0a0a;
+  background: #0ff;
+  color: #000;
+  border-color: #0ff;
 }
 
 /* ===== Hero Section ===== */
@@ -116,22 +123,22 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 6rem 0 4rem;
-  animation: fadeUp 0.8s ease forwards;
 }
 
 .hero-text {
   max-width: 550px;
-  animation: slideLeft 0.7s ease forwards;
 }
 
 .hero h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
+  text-shadow: 0 0 6px #fff;
 }
 
 .lead {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  opacity: 0.85;
 }
 
 .hero-figure {
@@ -150,7 +157,7 @@ section::before {
   display: block;
   width: 100px;
   height: 2px;
-  background: #fff;
+  background: #0ff;
   margin: 0 auto 2rem;
   opacity: 0.15;
 }
@@ -176,18 +183,18 @@ section::before {
 /* ===== Cards ===== */
 .skill, .project-card, .contact-card {
   background: #111;
-  border: 1px solid #333;
+  border: 1px solid #222;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 10px 25px rgba(255,255,255,0.05);
+  box-shadow: 0 10px 25px rgba(0,255,255,0.1);
   transition: all 0.3s ease;
   position: relative;
 }
 
 .skill:hover, .project-card:hover, .contact-card:hover {
   transform: translateY(-8px);
-  border-color: #fff;
-  box-shadow: 0 20px 40px rgba(255,255,255,0.15);
+  border-color: #0ff;
+  box-shadow: 0 15px 35px rgba(0,255,255,0.25);
 }
 
 /* ===== Text inside cards ===== */
@@ -195,10 +202,11 @@ section::before {
   font-size: 1.3rem;
   margin-bottom: 0.6rem;
   font-weight: 600;
+  color: #0ff;
 }
 
 .skill p, .project-card p, .contact-card p {
-  opacity: 0.8;
+  opacity: 0.85;
   line-height: 1.5;
 }
 
@@ -214,13 +222,14 @@ section::before {
 .quick-links a {
   font-weight: 600;
   text-decoration: none;
-  color: #fff;
+  color: #0ff;
   transition: all 0.3s ease;
 }
 
 .quick-links a:hover {
-  opacity: 0.6;
+  opacity: 0.8;
   transform: translateY(-2px);
+  text-shadow: 0 0 8px #0ff;
 }
 
 /* ===== Footer ===== */
@@ -249,11 +258,6 @@ section::before {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes slideLeft {
-  from { opacity: 0; transform: translateX(-50px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -266,7 +270,7 @@ section::before {
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
-  .hero-inner {
+  .hero {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
@@ -311,3 +315,4 @@ section::before {
     font-size: 0.95rem;
   }
 }
+
