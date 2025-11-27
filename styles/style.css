@@ -426,4 +426,181 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* === Global === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #000;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+/* === Header === */
+.site-header {
+  border-bottom: 1px solid #000;
+  background: #fff;
+  backdrop-filter: blur(4px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+/* === Navigation === */
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.primary-nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+}
+
+.primary-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #000;
+  transition: width .3s ease;
+}
+
+.primary-nav a:hover::after {
+  width: 100%;
+  transform-origin: left;
+}
+
+/* === Buttons === */
+.btn {
+  padding: .6rem 1.2rem;
+  border: 2px solid #000;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.btn.ghost {
+  background: #000;
+  color: #fff;
+}
+
+.btn.ghost:hover {
+  background: transparent;
+  color: #000;
+}
+
+/* === Hero section === */
+.hero {
+  padding: 6rem 0 4rem;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-text h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-figure {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(25px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* === Quick links === */
+.quick-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.quick-links a {
+  font-size: 1.1rem;
+  border-bottom: 2px solid transparent;
+  transition: .3s;
+}
+
+.quick-links a:hover {
+  border-bottom: 2px solid #000;
+}
+
+/* === Footer === */
+.site-footer {
+  border-top: 1px solid #000;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.muted {
+  opacity: 0.6;
+  font-size: .9rem;
+  margin-top: .3rem;
+}
+
+/* === Scroll reveal (page sections) === */
+section {
+  animation: fadeSlideUp .8s ease both;
+}
+
+@keyframes fadeSlideUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
 
