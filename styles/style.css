@@ -270,3 +270,54 @@ body {
   margin-top: 3rem;
   border-top: 1px solid #333;
 }
+
+/* SKILLS PAGE DESIGN */
+.skills h1 {
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.intro {
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill-box {
+  padding: 1.5rem;
+  background: #111;
+  border-radius: 12px;
+  border: 1px solid #333;
+  transition: 0.4s ease;
+  animation: fade-slide 0.6s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-8px);
+  border-color: #fff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.15);
+}
+
+.skill-box h3 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.skill-box p {
+  opacity: 0.75;
+}
+
+/* Fade animation */
+@keyframes fade-slide {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
