@@ -1,76 +1,49 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>About — Lorenz Marl M. Busito</title>
-  <meta name="description" content="About — IT student portfolio of Lorenz Marl M. Busito" />
-
-  <!-- Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self';">
-
-  <meta name="referrer" content="no-referrer" />
-  <link rel="stylesheet" href="styles/style.css" />
-
-  <!-- Google Font (Safe Method: Local fallback styling) -->
-  <style>
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-  </style>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
- 
 
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Lorenz Marl M. Busito</a>
       <nav class="primary-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
     </div>
   </header>
 
-  <main id="content" class="container fade-in">
-    <article class="about card">
-      <h1>About Me</h1>
-      <p class="intro">
-        I’m an IT student passionate about web development and computer networking. 
-        I currently have beginner-level experience in creating websites and learning network fundamentals. 
-        I love exploring new technologies, building hands-on projects, and continuously improving my skills.
-      </p>
-
-      <hr />
-
-      <h3>Education</h3>
-      <ul class="styled-list">
-        <li>2022 - Present — Polytechnic University of the Philippines — Bachelor of Science in Information Technology</li>
-        <li>2019 - 2021 — Paranaque National High School — Information Communication and Technology</li>
-        <li>2015 - 2019 — Don Galo National High School — Paranaque City</li>
-      </ul>
-
-      <h3>Locations</h3>
-      <ul class="styled-list">
-        <li>417 Rome St BF Homes Intl Phase 4, Las Pinas City</li>
-        <li>3293 Kabesang Cilio St. Tambo, Paranaque City</li>
-      </ul>
-
-      <h3>Contact</h3>
-      <p><strong>Lorenz Marl M. Busito</strong></p>
-      <p><em>Note: Add an email for clickable link in contact page.</em></p>
-    </article>
+  <!-- About Content -->
+  <main class="container">
+    <section class="intro">
+      <h2 class="section-subtitle">About Me</h2>
+      <p>Hello! I am <strong>Lorenz Marl M. Busito</strong>, an aspiring IT student specializing in web development and computer networking. I enjoy creating practical digital solutions and learning modern technology. I aim to improve my skills through hands-on projects and continuous self-learning.</p>
+      <p>My passion is solving real-world problems using technology. I am proactive, friendly, and love collaborating with others to build meaningful projects.</p>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Lorenz Marl M. Busito</p>
+      <p>© <span id="year"></span> Lorenz Marl M. Busito — IT Student</p>
+      <p class="muted">Black & White Modern Portfolio — Built with passion.</p>
     </div>
   </footer>
 
-  <script src="scripts/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
