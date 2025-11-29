@@ -1,29 +1,22 @@
-<<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Skills — Lorenz Marl M. Busito</title>
-  <meta name="description" content="Skills — IT student portfolio" />
-
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self';">
-  <meta name="referrer" content="no-referrer" />
-  <link rel="stylesheet" href="styles/style.css" />
-
-  <style>
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-  </style>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
 
-  <header class="site-header" role="banner">
+  <!-- Header -->
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Lorenz Marl M. Busito</a>
-      <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+      <nav class="primary-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -31,30 +24,52 @@
     </div>
   </header>
 
-  <main id="content" class="container fade-in">
-    <section class="skills card">
-      <h1>Skills</h1>
-      <p class="intro">
-        These are the skills and abilities I have developed through experience, learning, and teamwork.
-      </p>
-
+  <!-- Skills Content -->
+  <main class="container">
+    
+    <!-- Web Dev Skills -->
+    <section class="skills">
+      <h2 class="section-subtitle">Web Development Skills</h2>
       <div class="skill-grid">
-        <div class="skill skill-box"><h3>Communication Skills</h3><p>Clear verbal and written communication.</p></div>
-        <div class="skill skill-box"><h3>Teamwork & Collaboration</h3><p>Works well in team environments.</p></div>
-        <div class="skill skill-box"><h3>Responsible & Reliable</h3><p>Dependable and punctual.</p></div>
-        <div class="skill skill-box"><h3>Customer Service</h3><p>Basic customer-facing experience.</p></div>
-        <div class="skill skill-box"><h3>Microsoft Office</h3><p>Word, Excel, PowerPoint.</p></div>
-        <div class="skill skill-box"><h3>Computer Literacy</h3><p>General PC skills and basic troubleshooting.</p></div>
+        <div class="skill-card"><h3>HTML</h3></div>
+        <div class="skill-card"><h3>CSS</h3></div>
+        <div class="skill-card"><h3>JavaScript</h3></div>
+        <div class="skill-card"><h3>Python</h3></div>
+        <div class="skill-card"><h3>Networking Basics</h3></div>
+        <div class="skill-card"><h3>Computer Literacy</h3></div>
       </div>
     </section>
+
+    <!-- Work Skills -->
+    <section class="skills">
+      <h2 class="section-subtitle">Work & Personal Skills</h2>
+      <div class="skill-grid">
+        <div class="skill-card"><h3>Communication Skills</h3></div>
+        <div class="skill-card"><h3>Teamwork & Collaboration</h3></div>
+        <div class="skill-card"><h3>Responsible & Reliable</h3></div>
+        <div class="skill-card"><h3>Customer Service</h3></div>
+        <div class="skill-card"><h3>Positive Attitude</h3></div>
+        <div class="skill-card"><h3>Adaptability</h3></div>
+        <div class="skill-card"><h3>Microsoft Word</h3></div>
+        <div class="skill-card"><h3>Excel</h3></div>
+        <div class="skill-card"><h3>PowerPoint</h3></div>
+        <div class="skill-card"><h3>Basic Inventory Management</h3></div>
+        <div class="skill-card"><h3>Basic Troubleshooting</h3></div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Lorenz Marl M. Busito</p>
+      <p>© <span id="year"></span> Lorenz Marl M. Busito — IT Student</p>
+      <p class="muted">Black & White Modern Portfolio — Built with passion.</p>
     </div>
   </footer>
 
-  <script src="scripts/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
