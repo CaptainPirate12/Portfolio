@@ -1,72 +1,64 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact — Lorenz Marl M. Busito</title>
-  <meta name="description" content="Contact — IT student portfolio" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self';">
-  <meta name="referrer" content="no-referrer" />
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
-  
-  <header class="site-header" role="banner">
+
+  <!-- Header -->
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Lorenz Marl M. Busito</a>
-      <nav class="primary-nav" role="navigation" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="projects.html">Projects</a></li>
-        </ul>
-      </nav>
+      <nav class="primary-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
     </div>
   </header>
 
-  <main id="content" class="container fade-in">
+  <!-- Contact Content -->
+  <main class="container">
     <section class="contact">
-      <h1>Contact</h1>
-      <p class="intro">Feel free to reach out for collaboration, inquiries, or future opportunities.</p>
+      <h2 class="section-subtitle">Contact</h2>
 
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Locations</h3>
-          <ul>
-            <li>417 Rome St BF Homes Intl Phase 4, Las Pinas City</li>
-            <li>3293 Kabesang Cilio St. Tambo, Paranaque City</li>
-          </ul>
-        </div>
+      <!-- Original Info -->
+      <div class="contact-info">
+        <p><strong>Address:</strong> Las Piñas City, Philippines</p>
+        <p><strong>Email:</strong> lorenzmarlbusito04@gmail.com</p>
+        <p><strong>Phone:</strong> 0915-548-1688</p>
+      </div>
 
-        <div class="contact-card">
-          <h3>Name</h3>
-          <p>Lorenz Marl M. Busito</p>
-        </div>
-
-        <div class="contact-card">
-          <h3>Email</h3>
-          <p><em>Please provide an email address to enable a mailto link.</em></p>
-        </div>
-
-        <div class="contact-card">
-         <h3>Social</h3>
-          <p>
-            <a href="https://github.com/CaptainPirate12" target="_blank" rel="noopener noreferrer">GitHub</a> | 
-            <a href="https://www.facebook.com/lorenzmarl.busito" target="_blank" rel="noopener noreferrer">Facebook</a>
-          </p>
-        </div>
+      <!-- Contact Form -->
+      <div class="contact-card">
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Lorenz Marl M. Busito</p>
+      <p>© <span id="year"></span> Lorenz Marl M. Busito — IT Student</p>
+      <p class="muted">Black & White Modern Portfolio — Built with passion.</p>
     </div>
   </footer>
 
-  <script src="scripts/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
