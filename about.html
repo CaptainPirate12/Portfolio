@@ -13,25 +13,114 @@
     <div class="container header-inner">
       <a class="brand" href="index.html">Lorenz Marl M. Busito</a>
       <nav class="primary-nav">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <!-- About Content -->
   <main class="container">
+
+    <!-- About Me -->
     <section class="intro">
       <h2 class="section-subtitle">About Me</h2>
-      <p>Hello! I am <strong>Lorenz Marl M. Busito</strong>, an aspiring IT student specializing in web development and computer networking. I enjoy creating practical digital solutions and learning modern technology. I aim to improve my skills through hands-on projects and continuous self-learning.</p>
-      <p>My passion is solving real-world problems using technology. I am proactive, friendly, and love collaborating with others to build meaningful projects.</p>
+      <p>
+        Hello! I am <strong>Lorenz Marl M. Busito</strong>, an aspiring IT student specializing in web development and computer networking. I enjoy creating practical digital solutions and learning modern technology.
+      </p>
+      <p>
+        My passion is solving real-world problems using technology. I am proactive, friendly, and enjoy collaborating with others to build meaningful projects.
+      </p>
     </section>
+
+    <!-- Education & Certificates -->
+<section class="about-education">
+  <h2 class="section-subtitle">Education</h2>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>Elementary</h3>
+      <p>
+        <strong>[Elementary School Name]</strong><br>
+        Graduated
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Junior High School</h3>
+      <p>
+        <strong>[Junior High School Name]</strong><br>
+        Graduated
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Senior High School</h3>
+      <p>
+        <strong>[Senior High School Name]</strong><br>
+        Graduated
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>College</h3>
+      <p>
+        <strong>Bachelor of Science in Information Technology</strong><br>
+        [College / University Name]
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="about-certificates">
+  <h2 class="section-subtitle">Certificates</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3>Basic Computer Literacy</h3>
+      <p>Certificate of Completion</p>
+
+      <button class="btn small" onclick="openCert('certificates/computer-literacy.pdf')">
+        View Certificate
+      </button>
+    </div>
+
+    <div class="project-card">
+      <h3>Basic Networking Fundamentals</h3>
+      <p>Certificate of Completion</p>
+
+      <button class="btn small" onclick="openCert('certificates/networking.pdf')">
+        View Certificate
+      </button>
+    </div>
+
+    <div class="project-card">
+      <h3>Web Development Fundamentals</h3>
+      <p>Certificate of Completion</p>
+
+      <button class="btn small" onclick="openCert('certificates/web-development.pdf')">
+        View Certificate
+      </button>
+    </div>
+
+    <div class="project-card">
+      <h3>Basic Troubleshooting</h3>
+      <p>Certificate of Completion</p>
+
+      <button class="btn small" onclick="openCert('certificates/troubleshooting.pdf')">
+        View Certificate
+      </button>
+    </div>
+
+  </div>
+</section>
+
   </main>
 
   <!-- Footer -->
@@ -45,5 +134,32 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <script>
+  function openCert(file) {
+    document.getElementById("certFrame").src = file;
+    document.getElementById("certDownload").href = file;
+    document.getElementById("certificateModal").style.display = "flex";
+  }
+
+  function closeCert() {
+    document.getElementById("certificateModal").style.display = "none";
+    document.getElementById("certFrame").src = "";
+  }
+</script>
+
+  <!-- Certificate Modal -->
+<div id="certificateModal" class="cert-modal">
+  <div class="cert-modal-content">
+    <span class="cert-close" onclick="closeCert()">&times;</span>
+
+    <iframe id="certFrame"></iframe>
+
+    <a id="certDownload" class="btn small" download>
+      Download Certificate
+    </a>
+  </div>
+</div>
+
 </body>
 </html>
